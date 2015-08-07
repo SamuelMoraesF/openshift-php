@@ -100,6 +100,7 @@ function build() {
 
     # Install pecl
     PECL_FILE=${OPENSHIFT_REPO_DIR}/.openshift/php-pecl.txt
+    echo "apcu 4.0.7" >> $PECL_FILE;
     if [ -f ${PECL_FILE} ]; then
         OLDIFS=$IFS
         IFS=$'\n'
